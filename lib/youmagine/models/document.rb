@@ -1,4 +1,4 @@
-require_relative "api_model"
+require_relative "../api_model"
 
 module Youmagine
   class Document < ApiModel
