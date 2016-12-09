@@ -3,11 +3,6 @@ require_relative "paginated_collection"
 
 module Youmagine
   class ApiModel
-    include HTTParty
-
-    base_uri Youmagine.configuration.uri
-    default_params auth_token: Youmagine.configuration.token
-
     ACCEPTED_IMAGE_VERSIONS = %i(small medium large).freeze
     DEFAULT_ACCEPTED_ATTRIBUTES = %i(id).freeze
 
@@ -43,14 +38,23 @@ module Youmagine
       image
     end
 
+    def self.get(path, options = { })
+      uri = Youmagine.configuration.uri + path
+
+      options[:query] ||= {}
+      options[:query][:auth_token] = Youmagine.configuration.token
+
+      begin
+        HTTParty.get(uri, options)
+      rescue
+        raise Youmagine::ConnectionException, "Host is down"
+      end
+    end
+
     def initialize(attributes = {})
       attributes.each do |key, value|
         public_send("#{key}=", value)
       end
-    end
-
-    def get(uri, options)
-
     end
   end
 end

@@ -21,7 +21,7 @@ VCR.configure do |c|
 end
 
 Youmagine.configure do |c|
-  c.uri = "https://api.youmagine.com/v1/"
+  c.uri = "https://api.youmagine.com/v1"
   c.token = "foobar"
 end
 
