@@ -1,8 +1,8 @@
 require "./lib/youmagine-api-client"
 require "vcr"
+require "webmock/rspec"
 
 RSpec.configure do |config|
-
   config.expect_with :rspec do |expectations|
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
   end
@@ -16,7 +16,7 @@ end
 
 VCR.configure do |c|
   c.cassette_library_dir = "vcr_cassettes"
-  c.hook_into :fakeweb
+  c.hook_into :webmock
   c.default_cassette_options = { record: :once }
 end
 

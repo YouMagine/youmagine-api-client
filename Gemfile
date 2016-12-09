@@ -8,7 +8,7 @@ group :development do
 end
 
 group :development, :test do
-  gem "fakeweb"
+  gem "webmock"
   gem "rspec"
   gem "vcr"
   gem "byebug"
