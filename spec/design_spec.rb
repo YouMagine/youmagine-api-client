@@ -20,6 +20,15 @@ describe Youmagine::Design do
       end
     end
 
+    it "limits the amount of results" do
+      VCR.use_cassette "youmagine_designs_limit" do
+        designs = Youmagine::Design.all(limit: 10)
+
+        expect(designs.per_page).to eq 10
+      end
+    end
+  end
+
       end
     end
   end
