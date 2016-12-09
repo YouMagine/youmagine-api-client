@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.youmagine.com/v1/designs/14712?auth_token=foobar
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Status:
+      - 200 OK
+      Last-Modified:
+      - Fri, 09 Dec 2016 10:34:54 GMT
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Origin
+      Access-Control-Max-Age:
+      - '86400'
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Request-Id:
+      - eb5d3feb-8769-4568-a02b-67c30fbf114e
+      Access-Control-Allow-Headers:
+      - Origin,Accept,Content-Type,X-Requested-With,X-CSRF-Token
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET,POST,PUT,PATCH,DELETE
+      X-Runtime:
+      - '0.133245'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Access-Control-Request-Method:
+      - "*"
+      Date:
+      - Fri, 09 Dec 2016 13:14:59 GMT
+      Set-Cookie:
+      - youmagine_com_session=UStEekphclY4TGtvVWFCREtHc1JvNmVLQzBNWllTb3hhUjZFQ210Wk4zeUpMcjVQL25LT2NCRTRIOGZUUVI5RFJvK3lYMkw4RmNxcit1THc5MGMyd3cwd29Zano3SWoyOWJvQWdFa3R2dThYbytpNDgrZ1lDeFVQREFZTnZCNjZBRU1lWXhWVHM1ZnlITmtZdS9UZHc2emtKTUxiMWJRUDFjcm8xOHRPODk3eURPamhKU0YrclV1YkFiajZ2UlQxOXVPdXhOTVlMcGYzMmc0K0VzdVNGZWlveW5UK2c5cFNKbktpNnZuQXJrN2RaZnQ0ZDhJbmJUY3ZxQi9Cb05FRTNuTWRrME5TT29STEhSbWZ0Yi9NNzBIV3VZeUhDVWxPYzFTOStRb3UwS3AvYkVIa01kcWpKREVEUHIxN3NFdVhHVzNwTGNVZlNTa2cyNDR2WjdxUVdBPT0tLU5FOVM3SlNYWkNHRmh1bnNHQm1GV3c9PQ%3D%3D--a047a0ccf658b039df9d5bedc51db68df2b691d8;
+        domain=.youmagine.com; path=/; secure; HttpOnly
+      X-Powered-By:
+      - Phusion Passenger 5.0.28
+      - cloud66
+      Server:
+      - nginx + Phusion Passenger 5.0.28
+    body:
+      encoding: UTF-8
+      string: '{"id":14712,"name":"Stryfe 180 Motor Cover","slug":"stryfe-180-motor-cover","description":"Stryfe
+        180 Motor Cover","user_id":68640,"created_at":"2016-12-09T11:33:39.690+01:00","updated_at":"2016-12-09T11:34:54.826+01:00","primary_image_id":155054,"license":"ccbyncnd","state":"published","design_category_id":10,"excerpt":"Stryfe
+        180 Motor Cover","last_trending_popularity":0.0,"current_delta_popularity":0.0,"materials":"","documents_zip":{"url":"https://s3-eu-west-1.amazonaws.com/files.youmagine.com/uploads/design/documents_zip/14712/stryfe-180-motor-cover.zip"},"download_count":1,"documents_download_count":1,"attribution":"","tags":[{"id":1237,"name":"NERF","taggings_count":36},{"id":12966,"name":"stryfe","taggings_count":1},{"id":12967,"name":"motor
+        cover","taggings_count":1}],"user":{"id":68640,"screen_name":"jodocast"},"primary_image":{"file":{"url":"https://s3-eu-west-1.amazonaws.com/files.youmagine.com/uploads/image/file/155054/jamrendering_14712_5219420161209-18447-bsqu24.png","small":{"url":"https://s3-eu-west-1.amazonaws.com/files.youmagine.com/uploads/image/file/155054/small_jamrendering_14712_5219420161209-18447-bsqu24.png"},"medium":{"url":"https://s3-eu-west-1.amazonaws.com/files.youmagine.com/uploads/image/file/155054/medium_jamrendering_14712_5219420161209-18447-bsqu24.png"},"large":{"url":"https://s3-eu-west-1.amazonaws.com/files.youmagine.com/uploads/image/file/155054/large_jamrendering_14712_5219420161209-18447-bsqu24.png"},"span4":{"url":"https://s3-eu-west-1.amazonaws.com/files.youmagine.com/uploads/image/file/155054/span4_jamrendering_14712_5219420161209-18447-bsqu24.png"},"span2":{"url":"https://s3-eu-west-1.amazonaws.com/files.youmagine.com/uploads/image/file/155054/span2_jamrendering_14712_5219420161209-18447-bsqu24.png"},"span1":{"url":"https://s3-eu-west-1.amazonaws.com/files.youmagine.com/uploads/image/file/155054/span1_jamrendering_14712_5219420161209-18447-bsqu24.png"},"mini":{"url":"https://s3-eu-west-1.amazonaws.com/files.youmagine.com/uploads/image/file/155054/mini_jamrendering_14712_5219420161209-18447-bsqu24.png"},"grid":{"url":"https://s3-eu-west-1.amazonaws.com/files.youmagine.com/uploads/image/file/155054/grid_jamrendering_14712_5219420161209-18447-bsqu24.png"},"carousel":{"url":"https://s3-eu-west-1.amazonaws.com/files.youmagine.com/uploads/image/file/155054/carousel_jamrendering_14712_5219420161209-18447-bsqu24.png"},"carousel_thumb":{"url":"https://s3-eu-west-1.amazonaws.com/files.youmagine.com/uploads/image/file/155054/carousel_thumb_jamrendering_14712_5219420161209-18447-bsqu24.png"}}}}'
+    http_version: 
+  recorded_at: Fri, 09 Dec 2016 13:14:59 GMT
+recorded_with: VCR 3.0.3

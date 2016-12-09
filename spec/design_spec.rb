@@ -29,6 +29,15 @@ describe Youmagine::Design do
     end
   end
 
+  context "find" do
+    it "returns a single design retrieved by id" do
+      VCR.use_cassette "youmagine_designs_find" do
+        design = Youmagine::Design.find(14712)
+
+        expect(design.id).to eq 14712
+        expect(design.name).to eq "Stryfe 180 Motor Cover"
+        expect(design.image).to include(:original, :small, :medium, :large)
+        expect(design.image[:small]).to eq "https://s3-eu-west-1.amazonaws.com/files.youmagine.com/uploads/image/file/155054/small_jamrendering_14712_5219420161209-18447-bsqu24.png"
       end
     end
   end
