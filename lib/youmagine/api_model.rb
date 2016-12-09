@@ -24,14 +24,14 @@ module Youmagine
       data = JSON.parse(response.body, symbolize_names: true)
 
       records = data.map do |model_json|
-        new(model_json.slice(*@accepted_attributes))
+        new(model_json.select { |k| @accepted_attributes.include?(k) })
       end
 
       PaginatedCollection.new(records, response.headers)
     end
 
     def self.from_json_response(response)
-      new(JSON.parse(response.body, symbolize_names: true).slice(*@accepted_attributes))
+      new(JSON.parse(response.body, symbolize_names: true).select { |k| @accepted_attributes.include?(k) })
     end
 
     def self.process_image_data(image_data)
