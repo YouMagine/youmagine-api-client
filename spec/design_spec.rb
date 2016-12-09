@@ -12,6 +12,14 @@ describe Youmagine::Design do
       end
     end
 
+    it "requests a specific page" do
+      VCR.use_cassette "youmagine_designs_page_5" do
+        designs = Youmagine::Design.all(page: 5)
+
+        expect(designs.current_page).to eq 5
+      end
+    end
+
       end
     end
   end
